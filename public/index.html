@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@0.7.4/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body class="flex items-center justify-center" style="background: #edf2f7;">
+  <div class="loader-cont">
+    <span class="loader"></span>
+</div>
+  <div class="bg-white g-cont shadow-lg flex form-container px-3 md:p-3 ">
+
+    <div class="side-cont md:p-5">
+      <div class="logo">
+        <img src="assets/img/logo.png" alt="">
+      </div>
+      <div class="w-text">
+        <h2>
+          Start your <br> journey with us.
+        </h2>
+        <p>
+          Unlock endless possibilities and embark on a transformative learning experience with our innovative platform. 
+        </p>
+      </div>
+
+      <div id="carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel" data-slide-to="1"></li>
+          <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="testimonial carousel-item active">
+            <p class="testimonial-content">
+              Game-changer! Your course made coding easy to understand and apply.
+            </p>
+            <div class="flex commentor">
+              <img src="assets/img/user1.jpg" class="commentor-img" alt="">
+              <div class="commentor-details d-block">
+                  <p class="cm-name">Naheem Olaide</p>
+                  <p class="cm-course">Beginner</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="testimonial carousel-item">
+            <p class="testimonial-content">
+              Great course! Simplified topics, interactive learning - web dev now!
+            </p>
+            <div class="flex commentor">
+              <img src="assets/img/user2.jpg" class="commentor-img" alt="">
+              <div class="commentor-details d-block">
+                  <p class="cm-name">Micheal James</p>
+                  <p class="cm-course">Beginner</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="testimonial carousel-item">
+            <p class="testimonial-content">
+              Awesome course! Clear explanations, prac. examples - gained skills</p>
+            <div class="flex commentor">
+              <img src="assets/img/user3.jpg" class="commentor-img" alt="">
+              <div class="commentor-details d-block">
+                  <p class="cm-name">Emilly Joe</p>
+                  <p class="cm-course">Intermidiate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-cont w-100 px-5 mt-4">
+      <h2 class="form-heading">Sign up</h2>
+      <p>Register now for an educational adventure!</p>
+      <form class="reg-form mt-5 needs-validation" method="post" id="courseForm">
+        <div class="row">
+          <div class="form-group col-md-6 col-sm-12">
+            <label for="name">Fullname</label>
+            <input type="text" minlength="3" name="Fullname" id="name" class="form-control" value=""
+              placeholder="John doe" required />
+          </div>
+          <div class="invalid-feedback">
+            Provide a valid name
+          </div>
+
+          <div class="form-group col-md-6 col-sm-12">
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" class="form-control" value=""
+              placeholder="email@domain.com" required />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-6 col-sm-12">
+            <label for="phone">Phone number</label>
+            <input type="text" maxlength="14" minlength="7" name="phone" id="phone" class="form-control" value=""
+              placeholder="+1 (XXX) XXX-XXXX" required />
+          </div>
+          <div class="invalid-feedback">
+            Invalid phone number
+          </div>
+
+          <div class="form-group col-md-6 col-sm-12">
+            <label for="dob">Date of Birth</label>
+            <input type="date" name="dob" id="dob" class="form-control" value="" max="2016-12-31" required />
+          </div>
+          <div class="invalid-feedback">
+            Date of birth is required
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-6 col-sm-12">
+            <label for="email">Coding Experience</label>
+              <div class="radios mx-auto">
+                <label for="beginner" class="checked col-sm-12">
+                  <input type="radio" name="mode" class="radio" id="beginner" value="beginner" checked required />
+                  <span>Beginner</span>
+                </label>                
+                <label for="inter" class="level-cont col-sm-12">
+                  <input type="radio" name="mode" class="radio" id="inter" value="Intermidiate" required />
+                  <span>Intermidiate</span>
+                </label>
+                <label for="expert" class="level-cont col-sm-12">
+                  <input type="radio" name="mode" class="radio" id="expert" value="Expert" required />
+                  <span>Expert</span>
+                </label>
+              </div>
+          </div>
+
+          <div class="form-group col-md-6 w-100 col-sm-12">
+            <label for="countrySelect">Country</label>
+            <select id="countrySelect" id="country" name="country" class="form-control" required>
+              <option value="" selected hidden>Select country</option>
+              <!-- Options for all countries will be dynamically added here -->
+            </select>
+
+            <div class="form-group p-0 mt-4 col-md-12">
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender" class="form-control" required>
+                <option value="" selected hidden>Choose Gender</option>
+                <option value="Male">Male</option>
+                <option value="Male">Female</option>
+              </select>
+            </div>
+          </div>
+          
+        </div>
+        
+
+          <div class="s-btn mb-5">
+            <button id="submit">Sign up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+  </div>
+  </div>
+  <script>
+
+    window.addEventListener('load', function() {
+      var loader = document.querySelector('.loader-cont');
+      loader.classList.add('loaded');
+    });
+    
+
+const inputElement = document.getElementById('phone');
+
+// Listen for input event
+inputElement.addEventListener('input', function(event) {
+  // Get the entered value
+  const value = event.target.value;
+
+  // Remove any non-numeric characters except '+'
+  const filteredValue = value.replace(/[^0-9+]/g, '');
+
+  // Update the input value with the filtered value
+  event.target.value = filteredValue;
+});
+  
+  const countrySelect = document.getElementById('countrySelect');
+
+  // Array of country names - replace this with your own list if needed
+  const countries = [
+    "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia",
+    "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium",
+    "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria",
+    "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad",
+    "Chile", "China", "Colombia", "Comoros", "Congo", "Costa Rica", "Cote d'Ivoire", "Croatia", "Cuba", "Cyprus",
+    "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador",
+    "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia",
+    "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti",
+    "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica",
+    "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia",
+    "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar", "Malawi",
+    "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia",
+    "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal",
+    "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "North Macedonia", "Norway", "Oman",
+    "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland",
+    "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia",
+    "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal",
+    "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia",
+    "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland",
+    "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago",
+    "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom",
+    "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam",
+    "Yemen", "Zambia", "Zimbabwe"
+  ];
+  
+
+  // Loop through the countries array and create option elements
+  countries.forEach(country => {
+    const option = document.createElement('option');
+    option.text = country;
+    countrySelect.add(option);
+  });
+
+  const radioElements = document.getElementsByClassName('radio');
+  
+  
+  for (let i = 0; i < radioElements.length; i++) {
+    const radio = radioElements[i];
+    const parent = radio.parentElement;
+  
+    radio.addEventListener('change', function() {
+      // Remove the class from all other parent elements
+      for (let j = 0; j < radioElements.length; j++) {
+        const otherRadio = radioElements[j];
+        const otherParent = otherRadio.parentElement;
+        
+        if (otherRadio !== this) {
+          otherParent.classList.remove('checked');
+          otherParent.classList.add('level-cont');
+        }
+      }
+  
+      // Toggle the class on the current parent element
+      if (this.checked) {
+        parent.classList.add('checked');
+        parent.classList.remove('level-cont');
+      } else {
+        parent.classList.remove('checked');
+        parent.classList.add('level-cont');
+      }
+    });
+  }
+  
+  const radioElements2 = document.getElementsByClassName('radio2');
+  for (let i = 0; i < radioElements2.length; i++) {
+    const radio = radioElements2[i];
+    const parent = radio.parentElement;
+  
+    radio.addEventListener('change', function() {
+      // Remove the class from all other parent elements
+      for (let j = 0; j < radioElements.length; j++) {
+        const otherRadio = radioElements2[j];
+        const otherParent = otherRadio.parentElement;
+        
+        if (otherRadio !== this) {
+          otherParent.classList.remove('checked');
+          otherParent.classList.add('level-cont');
+        }
+      }
+  
+      // Toggle the class on the current parent element
+      if (this.checked) {
+        parent.classList.add('checked');
+        parent.classList.remove('level-cont');
+      } else {
+        parent.classList.remove('checked');
+        parent.classList.add('level-cont');
+      }
+    });
+  }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="mail.js"></script>
+</body>
+
+</html>
