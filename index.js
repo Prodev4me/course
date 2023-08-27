@@ -153,7 +153,7 @@ app.post('/sendEmail', function(req, res) {
             
             <p>Please take appropriate action.</p>
             
-            <a href="#" class="action-button">Check Dashboard</a>
+            <a href="http://13.54.207.79:3000/admin" class="action-button">Check Dashboard</a>
         </body>
         </html>
         `;
