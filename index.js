@@ -161,7 +161,7 @@ app.post('/sendEmail', function(req, res) {
       // Deifne mailing options like Sender Email and Receiver.
       var mailOptions = {
         from: "info.tekcify@gmail.com", // Sender ID
-        to: "naheemolaide5@gmail.com", // Reciever ID
+        to: "omotayodaib1992@gmail.com", // Reciever ID
         subject: "Email Subjects", // Mail Subject
         html: body, // Description
       };
